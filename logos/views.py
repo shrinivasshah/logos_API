@@ -27,7 +27,7 @@ def logoList(request):
 	return Response(serializer.data)
 
 @api_view(['GET'])
-def logoDetail(request, pk):
+def logoDetail(request, pk,):
 	logos = Logo.objects.get(id=pk)
 	serializer = LogoSerializer(logos, many=False)
 	return Response(serializer.data)
